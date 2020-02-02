@@ -32,7 +32,7 @@
       </small>
       <small *ngIf="form.get('password').errors.minlength">
         Пароль должен быть {{form.get('password').errors.minlength.requiredLength}} символов.
-        Сейчас {{form.get('password').errors.minlength.actualLength}} символа(ов).
+        Сейчас число символов:{{form.get('password').errors.minlength.actualLength}}.
       </small>
     </div>
     <!-- /.validation -->
