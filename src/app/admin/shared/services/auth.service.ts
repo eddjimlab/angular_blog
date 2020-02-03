@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {User} from '../../../shared/interfaces';
+import {FbAuthResponse, User} from '../../../shared/interfaces';
 import {Observable} from 'rxjs';
 import {environment} from '../../../../environments/environment';
 import {tap} from 'rxjs/operators';
@@ -18,7 +18,7 @@ export class AuthService {
     return this.http.post(`https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=${environment.apiKey}`, user)
       .pipe(
         tap(this.setToken)
-      )
+      );
   }
 
   logout() {
@@ -28,7 +28,7 @@ export class AuthService {
     return !!this.token;
   }
 
-  private setToken(response) {
-  console.log(response)
+  private setToken(response: FbAuthResponse) {
+    console.log(response);
   }
 }
