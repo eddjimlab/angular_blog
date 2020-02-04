@@ -3,6 +3,4 @@ export interface Environment {
   production: boolean
   fbDbUrl: string
 }
-export interface Key {
-  key: string
-}
+
