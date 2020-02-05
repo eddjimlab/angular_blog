@@ -27,7 +27,7 @@ import {AuthGuard} from './shared/services/auth.guard';
           {path: 'login', component: LoginPageComponent},
           {path: 'dashboard', component: DashboardPageComponent, canActivate: [AuthGuard]},
           {path: 'create', component: CreatePageComponent, canActivate: [AuthGuard]},
-          {path: 'post/:id/edit', component: EditPageComponent, canActivate: [AuthGuard]}
+          {path: 'posts/:id/edit', component: EditPageComponent, canActivate: [AuthGuard]}
         ]
       }
     ])
