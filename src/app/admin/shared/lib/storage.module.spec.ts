@@ -1,6 +1,6 @@
-import {async, TestBed} from '@angular/core/testing';
+import { async, TestBed } from '@angular/core/testing';
 
-import {StorageModule} from './storage.module';
+import { StorageModule } from './storage.module';
 
 describe('StorageModule', () => {
   beforeEach(async(() => {

@@ -13,7 +13,7 @@ import {AuthGuard} from './shared/services/auth.guard';
 import {SearchPipe} from './shared/search.pipe';
 import {AlertComponent} from './shared/components/alert/alert.component';
 import {AlertService} from './shared/services/alert.servises';
-import {StorageModule} from './shared/localstorage/storage.module';
+import {StorageModule} from './shared/lib/storage.module';
 
 registerLocaleData(ruLocale, 'ru');
 
