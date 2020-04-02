@@ -1,6 +1,8 @@
 (global as any).WebSocket = require('ws');
 (global as any).XMLHttpRequest = require('xhr2');
 import 'zone.js/dist/zone-node';
+import 'localstorage-polyfill';
+(global as any).localStorage = localStorage;
 
 import { ngExpressEngine } from '@nguniversal/express-engine';
 import * as express from 'express';
@@ -9,6 +11,7 @@ import { join } from 'path';
 import { AppServerModule } from './src/main.server';
 import { APP_BASE_HREF } from '@angular/common';
 import { existsSync } from 'fs';
+
 
 // The Express app is exported so that it can be used by serverless Functions.
 export function app() {

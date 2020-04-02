@@ -1,9 +1,10 @@
-import {Injectable} from '@angular/core';
+import {Inject, Injectable, OnInit, PLATFORM_ID} from '@angular/core';
 import {HttpClient, HttpErrorResponse} from '@angular/common/http';
 import {FbAuthResponse, User} from '../../../shared/interfaces';
 import {Observable, Subject, throwError} from 'rxjs';
 import {environment} from '../../../../environments/environment';
 import {catchError, tap} from 'rxjs/operators';
+import {isPlatformBrowser} from '@angular/common';
 
 @Injectable({providedIn: 'root'})
 export class AuthService {
@@ -12,6 +13,7 @@ export class AuthService {
 
   constructor(private http: HttpClient) {
   }
+
 
   get token(): string {
     const expDate = new Date(localStorage.getItem('fb-token-exp'));
@@ -68,4 +70,6 @@ export class AuthService {
     }
 
   }
+
+
 }
